@@ -1,8 +1,6 @@
 function evenNumbers() {
-    var a = 100;
-    while (a >= 2) {
-      console.log(a);
-      a -= 2;
-    }
+  for (i= 100;i>=2;i=i-2){
+    console.log(i);
   }
-  evenNumbers();
+}
+evenNumbers();

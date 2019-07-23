@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //defnition
+        function getInitials(name) {
+
+            //storing in a string variable char at index 0 - charAt(index)
+            var initials = name.charAt(0)
+
+            //loop thru the string each char one by one 
+            for (var i=0; i<name.length; i++) {
+
+            //find index of space
+            if(name.charAt(i)==" ")  { 
+
+            //storing in a string variable the next character
+            initials = initials.concat(name.charAt(i+1))
+
+            }   
+        }
+
+        //in the end once
+        console.log(initials)
+    } 
+
+     //Mahendra Singh Dhoni
+    //calling the function
+
+     getInitials("Mahendra Singh Dhoni")
+     getInitials("Shah Rukh Khan")
+   
+    </script>
+</body>
+</html>

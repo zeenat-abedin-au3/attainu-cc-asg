@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Simple calculator in Javascript</title>
+  </head>
+  <body>
+    <h1>JS Calculator</h1>
+    <script>
+        
+        var inputIdFirst = "valueOfX",inputIdSecond = "valueOfY",outputId = "resultHere";
+        var getInputs = function(id) {
+          return parseInt(document.getElementById(id).value);
+        }
+        var showOutput = function(outputValue, outputIdAsArg) {
+          //if no argument is given then by default "outputId" taken
+          document.getElementById(outputId).innerHTML = outputValue;
+        }
+        var manuplateAs = function(operationName, valueOfX, valueOfY) {
+          if(operationName == 'add')
+            return valueOfX + valueOfY;
+          else if(operationName == 'sub')
+            return valueOfX - valueOfY;
+          else if(operationName == 'mul')
+            return valueOfX * valueOfY;
+          else if(operationName == 'div')
+            return valueOfX / valueOfY;
+        
+        } 
+        var operation = function(operationName){
+          x = getInputs(inputIdFirst);
+          y = getInputs(inputIdSecond);
+          output = manuplateAs(operationName, x, y);
+          showOutput(output);
+          console.log(x + " " + operationName + " " + y + " = " + output)
+        
+        };
+        </script>
+          
+          <input type="number" id="valueOfX"><br><br>
+          <input type="number" id="valueOfY"><br><br>
+          <button onclick="operation('add')"> + </button>
+          <button onclick="operation('sub')"> -</button>
+          <button onclick="operation('mul')"> *</button>
+          <button onclick="operation('div')"> /</button>
+          <h1 id="resultHere"></h1>
+    </body>
+    </html>
+     
+
+
+
+
+
+
+

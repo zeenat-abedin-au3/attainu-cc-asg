@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Definition
+        function hamming(str1, str2){
+            var l1 = str1.length        //Lengths of the strings
+            var l2 = str2.length
+            var hDistance = 0
+            //Verifying the lengths of the strings are equal
+            if(l1 = l2){
+                return "Strings aren't of equal length."
+            } else {
+                //l1 = l2
+                //Loop thru each character of both string 
+                for (var i = 0; i < l1; i++){
+
+                    //check In-equality at index
+                    if(str1.charAt(i).toLowerCase() = str2.charAt(i).toLowerCase())
+                    {
+                        hDistance++   //hDistance = hDistance + 1
+                    }
+                }//Loop Ends
+
+                return hDistance
+            }
+        }
+
+        //Function Calls
+        console.log(hamming("aaaa","aaab"))
+    
+    
+    
+    </script>
+</body>
+</html>

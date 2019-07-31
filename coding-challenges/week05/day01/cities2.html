@@ -8,10 +8,11 @@
 </head>
 <body>
     <ul></ul>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous">
-        
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<script>
         var state = "Telangana" //Input State
         var selectedCities = []
 $.ajax({
@@ -20,25 +21,23 @@ $.ajax({
         dataType: 'json',     //dataType - json
         
         success: function(json) {
-                var citiesArray = json
-                //looping over array
-                for(var i=0; i< citiesArray.length; i++) {
+        var citiesArray = json
+        //looping over array
+        for(var i=0; i< citiesArray.length; i++) {
 
-                    //match the cities belonging to that state - MATCHING CONDITION
-                    if(citiesArray[i].state.toLowerCase() == state.toLowerCase()) { 
-                    $('ul').append('<li>'+citiesArray[i].name+'</li>')
+        //match the cities belonging to that state - MATCHING CONDITION
+        if(citiesArray[i].state.toLowerCase() == state.toLowerCase()) { 
+        $('ul').append('<li>'+citiesArray[i].name+'</li>')
 
-                    }
+        }
                 
-                } //loop end
-
-            },
-            error: function(error){
-            console.log("error happened!")
-            }
-        })
-        
-
+    } //loop end
+     
+    },
+    error: function(error){
+    console.log("error happened!")
+    }
+    })
 
 </script>
 </body>

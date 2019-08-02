@@ -10,4 +10,4 @@ function fun(){
     sec=Math.floor(sec);
     console.log(hour + ":" + min + ":" + sec );
 }
-fun();
+fun(); 

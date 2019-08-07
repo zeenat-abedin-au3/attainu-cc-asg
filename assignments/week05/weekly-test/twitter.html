@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Twitter App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Twitter</h1>
+    <div class="split left">
+        <div class="centered">
+
+        <form>
+            <div class="form-group">
+               <div class="col-md-4">
+              <label form=""></label>
+              <input type="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter your name">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <div class="col-md-4">
+              <label for="exampleInputPassword1"></label>
+              <input type="" class="form-control" id="" placeholder="Tweet your thoughts">
+         </div>
+         </div>
+            <button type="submit" class="btn btn-primary">Tweet</button>
+          </form>
+      </div>
+    </div>
+    
+    <div class="split right">
+      <div class="centered">          
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+
+    <style>
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .left {
+      left: 0;
+      background-color: white;
+    }
+    
+    .right {
+      right: 0;
+      background-color: wheat;
+    }
+    </style
+    <style>
+    <script type="text/javascript" src='twitter.js'></script>
+    </style>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+  <div class="container">
+    <div class="row-no-gutters">
+      <div class="col-md-8">
+    </div>
+  </div>
+
+  <form>
+    <div class="form-group">
+       <div class="col-md-4">
+      <label form=""></label>
+      <input type="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter your name">
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <div class="col-md-4">
+      <label for="exampleInputPassword1"></label>
+      <input type="password" class="form-control" id="" placeholder="Tweet your thoughts">
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary" id="btn-tweet">Tweet</button>
+  </form>
+ 
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+$('#btn-tweet').on('click' , function(){
+  var data ={
+    name:($('#name').val()),
+    tweet:($('#tweet').val())
+  };
+    $.ajax({
+        url: '/tweet',
+        type: 'post',
+        contentType: 'application/json'
+        dataType: 'json',
+        data: JSON.stringify(data),
+        success: function(){
+          alert("tweet added successfully");
+
+        }
+    });
+  };
+</script>
+</body>
+</html>

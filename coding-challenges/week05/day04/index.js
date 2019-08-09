@@ -1,13 +1,14 @@
 
 var express = require('express')
+var bodyParser = require('body-parser')
+
 var app = express()
 app.use(bodyParser.json()) //middleware
 
-// {
+//{
 //   name: "Name",
 //   phone: "phone-no"
-// }
-
+//}
 
 var contacts = [{
     name: "Name",

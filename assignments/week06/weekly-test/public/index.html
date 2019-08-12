@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <title>Twitter Login</title>
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh">
+  <div class="card" style="width: 300px; height: 250px">
+   <div class="card-body bg-light">
+  <form action="/auth" method="POST">
+    <div class = "form-group">
+      <input type ="Username"
+             name ="Username"
+             class="form-control"
+             placeholder="Username">
+    </div>
+    <div class = "form-group" >
+      <input type ="password"
+             name ="password"
+             class="form-control"
+             placeholder="Password">
+    </div>
+    <input type="submit" value="login" class="btn btn-primary">
+ </form>
+ </div>
+ </div>
+ <script
+ src="https://code.jquery.com/jquery-3.4.1.min.js"
+ integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+ crossorigin="anonymous"></script>
+ <script type="text/hbs" src="./tweet.hbs"></script>
+
+</body>
+</html>

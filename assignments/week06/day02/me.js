@@ -9,12 +9,12 @@ app.set("view engine", "hbs");
 var me = {
     firstname: "Zeenat",
     lastname: "Abedin",
-    bio: " My name is Zeenat and I live in Kolkata, India. I'm a 23 year old aspirant web developer. I did my graduation in computer science. I am eager to learn new skills in life despite the fact that I'm a slow learner." ,
+    bio: " My name is Zeenat and I live in Kolkata, India. I'm a 22 year old aspirant web developer. I did my graduation in computer science. I am eager to learn new skills in life despite the fact that I'm a slow learner." ,
     movies: [
         "3 Idiots",
         "Catch Me If You Can",
         "Interstellar ",
-        "The Godfather ",
+        "The Godfather "
     ]
 };
 

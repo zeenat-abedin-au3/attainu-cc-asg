@@ -13,8 +13,15 @@ app.use(session({
 
 app.use(bodyParser.urlencoded());
 app.set('view engine', 'hbs');
-    res.render('tweet.hbs');
-
+app.use(function(req, res, next) {
+    if(!req.session.views) {
+        req.session.views = {}
+    }
+    var path = req.originalUrl;
+    req.session.views[path] = (req.session.views[path] || 0 ) + 1;
+    next();
+  });
+  
 
 app.use(express.static('public'));
 app.get('/login', function(req, res){

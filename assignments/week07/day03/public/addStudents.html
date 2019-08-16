@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+     crossorigin="anonymous">
+    <title>Add Students</title>
+</head>
+<body>
+    <div class = "container mt-5">
+        <form action ="/addstudent" method="POST">
+            <div class ="form-group">
+                <label for ="firstname">Firstname</label>
+                <input
+                   type="text"
+                   name="firstname"
+                   id="firstname"
+                   class="form-control">
+            </div>
+            <div class="form-group">
+                <label for ="lastname">Lastname</label>
+                <input
+                   type="text"
+                   name="lastname"
+                   id="lastname"
+                   class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for ="gender">Gender</label>
+                    <input
+                       type="text"
+                       name="gender"
+                       id="gender"
+                       class="form-control">
+            </div>
+            <div class="form-group">
+                <label for ="hometown">Hometown</label>
+                <input
+                   type="text"
+                   name="hometown"
+                   id="hometown"
+                   class="form-control">
+            </div>
+            <div class="form-group">
+                <label for = "username">Username</label>            
+                <input
+                   type="text"
+                   name="username"
+                   id="username"
+                   class="form-control">
+            </div>
+            <div class="form-group">
+                <label for ="password">Password</label>
+                <input
+                   type="text"
+                   name="password"
+                   id="password"
+                   class="form-control">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+    <a href="/logout"
+       class="btn btn-outline-dark"
+       style="position: fixed; top: 20px; right:20px">Logout
+    </a>
+</body>
+</html>

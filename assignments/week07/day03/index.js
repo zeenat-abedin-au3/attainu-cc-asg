@@ -1,6 +1,6 @@
 var express = require('express');
 var session = require('express-session');
-var exphbs = require("express-handlebars");
+var exphbs = require('express-handlebars');
 var mongoClient = require('mongodb').MongoClient;
 var db;
 

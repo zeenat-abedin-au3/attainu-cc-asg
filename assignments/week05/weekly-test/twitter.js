@@ -7,11 +7,12 @@ var tweets = [
         name: "digitizer",
         tweet: "This is a cool piece of information."
     },
-    {   
+    {
         name: "M0SH",
         tweet: "@digitizer I agree."
     }
-];
+]
+
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());

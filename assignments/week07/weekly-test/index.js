@@ -43,8 +43,7 @@ app.put('/getStudent',function(req,res){
     })
 })
  
-
- app.delete('/modifyStudent' , function (req, res) {
+app.delete('/modifyStudent' , function (req, res) {
     db.collection('students').deleteOne({_id: ObjectId(req.query.id)},
     {$set:{hometown:req.body.hometown}}, function(error,result){
     if(error)

@@ -13,6 +13,7 @@ var app = express();
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine','hbs');
 
+
 app.get('/students', function(req, res){
     db.collection('students')
     .find()

@@ -1,7 +1,20 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: url(https://i.pinimg.com/originals/96/11/2b/96112bd298f18e6b6b0651263aeb6236.jpg);
+
+    background: #2b5876;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .login-form {
@@ -14,6 +27,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    background-color: rgba(0, 0, 0, .3);
+    color: #ffffff;
 }
 
 .login-form h1 {

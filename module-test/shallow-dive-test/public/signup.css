@@ -1,9 +1,14 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/05/81/6456279a0080dd1.jpg );
+    background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/05/81/6456279a0080dd1.jpg ) center center / cover;
     background-repeat: no-repeat;
-
 }
 
 .signup-form {
@@ -16,6 +21,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    background-color: rgba(0, 0, 0, .3);
+    color: #ffF;
 }
 
 signup-form h1 {

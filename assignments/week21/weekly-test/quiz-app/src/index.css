@@ -1,0 +1,54 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.selected {
+  background-color: #ccc;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.correct {
+  border-left: 4px solid #26ae60;
+  border-right: 4px solid #26ae60;
+}
+.wrong {
+  border-left: 4px solid #e5b143;
+  border-right: 4px solid #e5b143;
+}
+
+p {
+  margin: 0;
+}
+
+.selected {
+  background: #47535e;
+  color: #fff;
+}
+
+.f-correct {
+  color: #26ae60;
+}
+.f-wrong {
+  color: #e5b143;
+}
+.answered {
+  background-color: #26ae60;
+}
+.review-not-ans {
+  background-color: #e5b143;
+}
+.review-card {
+  padding: 1rem;
+}
+
+.list-group-item:hover {
+  background: #47535e;
+  color: #fff;
+}

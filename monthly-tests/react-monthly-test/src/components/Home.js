@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import TimerDeal from "./shared/TimerDeal";
 
 class Home extends Component {
   render() {
-    return <div>Home Page</div>;
+    return <div>
+      <TimerDeal />
+    </div>;
   }
 }
 

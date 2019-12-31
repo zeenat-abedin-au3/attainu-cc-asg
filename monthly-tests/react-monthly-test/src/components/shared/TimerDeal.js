@@ -4,16 +4,19 @@ const TimerDeal = () => {
     return (
         <div className="row">
             <div className="col-md-4 m-auto py-3">
-                <h3>Deal of The Day</h3>
+                <h3 className="text-center">Deal of The Day</h3>
                 <Timer
-                    initialTime={5000000}
+                    initialTime={3600000}
                     direction="backward"
                 >
                     {() => (
                         <React.Fragment>
-                            <Timer.Hours /> hours {" "}
-                            <Timer.Minutes /> minutes {" "}
-                            <Timer.Seconds /> seconds {" "}
+                            <div className="text-center">
+                                <Timer.Hours /> <strong>Hours</strong> {" "}
+                                <Timer.Minutes /> <strong>Minutes</strong> {" "}
+                                <Timer.Seconds /> <strong>Seconds</strong> {" "}
+                            </div>
+
                         </React.Fragment>
                     )}
                 </Timer>

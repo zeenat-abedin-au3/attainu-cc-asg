@@ -1,4 +1,4 @@
-import { CREATE_USER, LOGIN_USER, LOGOUT } from "./actionTypes";
+import { CREATE_USER, LOGIN_USER, LOGOUT, ADD_TO_CART } from "./actionTypes";
 
 export const createUser = user => ({
   type: CREATE_USER,
@@ -12,4 +12,8 @@ export const loginUser = status => ({
 
 export const logout = () => ({
   type: LOGOUT
+});
+
+export const addToCart = () => ({
+  type: ADD_TO_CART
 });

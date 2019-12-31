@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../../actions/actions";
 
-const DropDown = ({ loggedIn, logout, history }) => {
+const DropDown = ({ loggedIn, logout, cartCount, history }) => {
   const handleLogout = () => {
     logout();
 
@@ -27,7 +27,7 @@ const DropDown = ({ loggedIn, logout, history }) => {
             My Profile
           </Link>
           <button className=" btn btn-block btn-outline-info">
-            0 Items in Cart
+            {cartCount} Items in Cart
           </button>
           <button
             className=" btn btn-block btn-outline-danger"
@@ -42,7 +42,8 @@ const DropDown = ({ loggedIn, logout, history }) => {
 };
 
 const mapStateToProps = state => ({
-  loggedIn: state.users.loggedIn
+  loggedIn: state.users.loggedIn,
+  cartCount: state.cart.count
 });
 
 export default withRouter(connect(mapStateToProps, { logout })(DropDown));

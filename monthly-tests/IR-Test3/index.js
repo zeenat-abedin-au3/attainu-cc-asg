@@ -1,5 +1,5 @@
 //cc #1
-/* const letterCombinations = (number) => {
+const letterCombinations = (number) => {
     if (!number.length) return [];
     const arr = [null, null, 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
 
@@ -38,62 +38,62 @@ const maxArea = (array) => {
     return maxArea;
 };
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))
- */
+
 
 
 // //CC #3
 class Node {
-    constructor(data, left, right) {
+    constructor(data) {
         this.data = data;
         this.left = null;
         this.right = null;
     }
 }
-
-const insert = (root, data) => {
-    if (!root) {
-        return new Node(data)
+class BT {
+    constructor() {
+        this.root = null;
     }
-    if (data < root.data) {
-        root.left = insert(root.left, data)
+    insert(data) {
+        var newNode = new Node(data);
+        if (this.root === null) this.root = newNode;
+        else this.insertNode(this.root, newNode);
     }
-    else if (data > root.data) {
-        root.left = insert(root.right, data)
+    insertNode(node, newNode) {
+        if (newNode.data < node.data) {
+            if (node.left === null) node.left = newNode;
+            else this.insertNode(node.left, newNode);
+        } else {
+            if (node.right === null) node.right = newNode;
+            else this.insertNode(node.right, newNode);
+        }
     }
-    return root
+    removeLeafNodes(node) {
+        if (!node) {
+            return null;
+        }
+        if (!node.left && !node.right) {
+            return null;
+        }
+        node.left = this.removeLeafNodes(node.left);
+        node.right = this.removeLeafNodes(node.right);
+        return node;
+    }
 }
+const BST = new BT();
+BST.insert(20);
+BST.insert(10);
+BST.insert(30);
+BST.insert(5);
+BST.insert(15);
+BST.insert(25);
+BST.insert(35);
+console.log(BST);
+BST.removeLeafNodes(BST.root);
+console.log(BST);
 
-const inorder = (node) => {
-    if (node !== null) {
-        inorder(node.left);
-        console.log('Inorder', node.data)
-        inorder(node.right);
-    }
-}
 
-const leafDelete = (root) => {
-    // console.log('root', root)
-    if (!root) return null;
-    if (!root.left && !root.right) return null
-    root.left = leafDelete(root.left)
-    root.right = leafDelete(root.right)
 
-    return root
-}
 
-let root = null
-root = insert(root, 20)
-insert(root, 10)
-insert(root, 5)
-insert(root, 15)
-insert(root, 30)
-insert(root, 25)
-insert(root, 35)
-console.log(root)
-inorder(root)
-leafDelete(root)
-console.log('------')
-inorder(root)
 
 
 

@@ -1,3 +1,34 @@
+// 1
+
+const bitArray = (array, length) => {
+    const result = [];
+    for (let i = 0; i < length; i++) {
+        result.push(array[i]);
+    }
+    return result;
+};
+
+const generateAllBinary = (length, array, i) => {
+    const result = [];
+    if (i === length) {
+        const data = bitArray(array, length);
+        console.log(data);
+        return result;
+    }
+
+    array[i] = 0;
+    generateAllBinary(length, array, i + 1);
+    array[i] = 1;
+    generateAllBinary(length, array, i + 1);
+};
+
+const numToBit = num => {
+    if (num <= 0) return null
+    const array = Array(num).fill(1);
+    generateAllBinary(num, array, 0);
+};
+
+numToBit(2);
 
 // 3
 const checkPairSeq = array => {
@@ -47,7 +78,7 @@ console.log(isRepeated([1, 2, 3, 4, 5, 5])); // true
 // 5
 /* 
 1. iterate till second last
-2. check index of the current array item from( i + 1),
+2. check the index of the current array item from( i + 1),
     if it's matched, that means it's already there in the given array
 3. break the loop and store that array of item, and return it
 */
